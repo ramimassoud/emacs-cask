@@ -37,10 +37,15 @@
  magit-last-seen-setup-instructions "1.4.0"
  uniquify-buffer-name-style 'forward)
 
+(load-theme 'solarized-dark t)
+(enable-theme 'solarized-dark)
+
 ;; Put autosave files (ie #foo#) and backup files (ie foo~) in ~/.emacs.d/.
 (custom-set-variables
  '(auto-save-file-name-transforms '((".*" "~/.emacs.d/autosaves/\\1" t)))
  '(backup-directory-alist '((".*" . "~/.emacs.d/backups/"))))
+
+(put 'narrow-to-region 'disabled nil)
 
 ;; create the autosave dir if necessary, since emacs won't.
 (make-directory "~/.emacs.d/autosaves/" t)
@@ -83,7 +88,6 @@
 ;; Do not use tabs for indentation
 (setq-default indent-tabs-mode nil)
 (menu-bar-mode -1)
-(enable-theme 'solarized-dark)
 
 ;; trucate even even when screen is split into multiple windows
 (setq-default truncate-partial-width-windows nil)
@@ -222,7 +226,10 @@
 ;; flyspell mode breaks auto-complete mode without this.
 (ac-flyspell-workaround)
 
-(setq ispell-program-name "/usr/local/bin/ispell")
+;; Setup path for brew installed binaries
+(add-to-list 'exec-path "/usr/local/bin")
+(add-to-list 'exec-path "~/.rbenv/shims/")
+;(setq ispell-program-name "/usr/local/bin/ispell")
 
 (global-undo-tree-mode)
 
