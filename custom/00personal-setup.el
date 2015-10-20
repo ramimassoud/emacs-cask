@@ -150,6 +150,7 @@
 ;(add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
 
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
+(add-to-list 'auto-mode-alist '("\\\.apib$" . markdown-mode))
 
 (setq path-to-ctags "/usr/local/bin/ctags") ;; <- you're ctags path here
 
@@ -228,11 +229,9 @@
 
 ;; Setup path for brew installed binaries
 (add-to-list 'exec-path "/usr/local/bin")
-(add-to-list 'exec-path "~/.rbenv/shims/")
+;(add-to-list 'exec-path "~/.rbenv/shims/")
 ;(setq ispell-program-name "/usr/local/bin/ispell")
 
 (global-undo-tree-mode)
 
 (delete-selection-mode t)
-
-(transient-mark-mode t)
