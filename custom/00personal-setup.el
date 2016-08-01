@@ -227,10 +227,7 @@
 ;; flyspell mode breaks auto-complete mode without this.
 (ac-flyspell-workaround)
 
-;; Setup path for brew installed binaries
-(add-to-list 'exec-path "/usr/local/bin")
-;(add-to-list 'exec-path "~/.rbenv/shims/")
-;(setq ispell-program-name "/usr/local/bin/ispell")
+(exec-path-from-shell-initialize)
 
 (global-undo-tree-mode)
 
