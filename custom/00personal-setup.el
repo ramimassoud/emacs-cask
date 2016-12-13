@@ -81,8 +81,6 @@
 ;; Navigate between windows using Alt-1, Alt-2, Shift-left, shift-up, shift-right
 (windmove-default-keybindings)
 
-(set-frame-font "-apple-Fira_Mono-medium-normal-normal-*-*-*-*-*-m-0-iso10646-1")
-
 ;; Display continuous lines
 (setq-default truncate-lines nil)
 ;; Do not use tabs for indentation

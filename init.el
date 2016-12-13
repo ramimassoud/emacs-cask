@@ -1,8 +1,19 @@
-(require 'cask "/usr/local/Cellar/cask/0.7.2/cask.el")
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
+(require 'cask)
 (cask-initialize)
 (require 'pallet)
 (pallet-mode t)
 (add-to-list 'load-path "~/.emacs.d/custom")
+
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa" . "https://melpa.org/packages/") t)
 
 (defmacro after (mode &rest body)
   "`eval-after-load' MODE evaluate BODY.
@@ -22,3 +33,19 @@ use to determine if the package is installed/loaded."
 (load "00personal-setup.el")
 (load "01ruby.el")
 (load "02keybindings.el")
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(auto-save-file-name-transforms (quote ((".*" "~/.emacs.d/autosaves/\\1" t))))
+ '(backup-directory-alist (quote ((".*" . "~/.emacs.d/backups/"))))
+ '(package-selected-packages
+   (quote
+    (yasnippet yaml-mode web-mode undo-tree textmate solarized-theme smartparens rubocop rspec-mode robe rinari rbenv rainbow-delimiters projectile-rails pallet multiple-cursors markdown-mode magit-gh-pulls magit-filenotify highlight-indentation grizzl exec-path-from-shell enh-ruby-mode editorconfig date-at-point auto-complete ag))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
