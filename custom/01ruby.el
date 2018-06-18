@@ -48,3 +48,4 @@ of FILE in the current directory, suitable for creation"
             (local-set-key (kbd "C-c l") 'rspec-compile-on-line)
             (local-set-key (kbd "C-c k") 'rspec-compile-file)
             ))
+(add-hook 'enh-ruby-mode-hook #'rubocop-mode)
