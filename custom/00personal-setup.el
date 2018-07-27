@@ -5,7 +5,7 @@
  confirm-kill-emacs 'y-or-n-p
  default-fill-column 79
  default-input-method "latin-1-postfix"
- default-tab-width 4
+ default-tab-width 2
  display-time-24hr-format t
  display-time-day-and-date t
  font-lock-maximum-decoration t
