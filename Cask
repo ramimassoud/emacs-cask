@@ -1,3 +1,4 @@
+(source gnu)
 (source melpa)
 
 (depends-on "ag")
@@ -12,6 +13,7 @@
 (depends-on "exec-path-from-shell")
 (depends-on "f")
 (depends-on "gh")
+(depends-on "ghub")
 (depends-on "git-commit")
 (depends-on "grizzl")
 (depends-on "highlight-indentation")
@@ -43,6 +45,7 @@
 (depends-on "rubocop")
 (depends-on "ruby-compilation")
 (depends-on "s")
+(depends-on "shut-up")
 (depends-on "smartparens")
 (depends-on "solarized-theme")
 (depends-on "textmate")
