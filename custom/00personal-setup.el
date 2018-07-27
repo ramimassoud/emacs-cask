@@ -1,8 +1,5 @@
 ;; Miscellaneous preference variables
 (setq
- calendar-latitude 40.71
- calendar-longitude -74.00
- calendar-location-name "Manhattan, NY"
  column-number-mode t
  completion-ignore-case t
  confirm-kill-emacs 'y-or-n-p
