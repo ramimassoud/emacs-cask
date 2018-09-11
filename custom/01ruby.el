@@ -30,14 +30,14 @@ of FILE in the current directory, suitable for creation"
 
 (defun rspec-compile-file ()
   (interactive)
-  (compile (format "cd %s;bundle exec rspec %s"
+  (compile (format "cd %s;spring rspec %s"
                    (get-closest-gemfile-root)
                    (file-relative-name (buffer-file-name) (get-closest-gemfile-root))
                    ) t))
 
 (defun rspec-compile-on-line ()
   (interactive)
-  (compile (format "cd %s;bundle exec rspec %s -l %s"
+  (compile (format "cd %s;spring rspec %s -l %s"
                    (get-closest-gemfile-root)
                    (file-relative-name (buffer-file-name) (get-closest-gemfile-root))
                    (line-number-at-pos)
