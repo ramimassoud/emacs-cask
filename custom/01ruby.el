@@ -49,3 +49,7 @@ of FILE in the current directory, suitable for creation"
             (local-set-key (kbd "C-c k") 'rspec-compile-file)
             ))
 (add-hook 'enh-ruby-mode-hook #'rubocop-mode)
+
+; Fix toggling from a lib/ file to the spec
+; https://github.com/pezra/rspec-mode/issues/157
+(setq rspec-primary-source-dirs '("app"))
