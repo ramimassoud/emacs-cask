@@ -1,3 +1,10 @@
+;;; ruby --- Ruby config
+
+;;; Commentary:
+;; All the setup for Ruby related workflows
+
+;;; Code:
+
 (setq enh-ruby-program "~/.rbenv/shims/ruby")
 (autoload 'enh-ruby-mode "enh-ruby-mode" "Major mode for ruby files" t)
 (add-to-list 'auto-mode-alist '("\\.rb$" . enh-ruby-mode))
@@ -53,3 +60,6 @@ of FILE in the current directory, suitable for creation"
 ; Fix toggling from a lib/ file to the spec
 ; https://github.com/pezra/rspec-mode/issues/157
 (setq rspec-primary-source-dirs '("app"))
+
+(provide '01ruby)
+;;; 01ruby.el ends here

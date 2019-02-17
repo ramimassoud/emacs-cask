@@ -1,8 +1,7 @@
+;;; init.el --- Initial config hook
+;;; Commentary:
 
-;; Added by Package.el.  This must come before configurations of
-;; installed packages.  Don't delete this line.  If you don't want it,
-;; just comment it out by adding a semicolon to the start of the line.
-;; You may delete these explanatory comments.
+;;; Code:
 (package-initialize)
 
 (require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el")
@@ -49,3 +48,6 @@ use to determine if the package is installed/loaded."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+(provide 'init)
+;;; init.el ends here

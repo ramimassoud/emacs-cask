@@ -1,4 +1,9 @@
+;;; keybindings --- All custom keybindings
+
+;;; Commentary:
 ;; Global bindings
+
+;;; Code:
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 ;; Press Command-p for fuzzy find in project
 (global-set-key (kbd "s-p") 'projectile-find-file)
@@ -39,3 +44,6 @@
 (define-key global-map (kbd "C-c l")       'linum-mode)
 (define-key global-map (kbd "C-x g")       'uncomment-region)
 (define-key global-map (kbd "C-c g")       'comment-region)
+
+(provide '02keybindings)
+;;; 02keybindings.el ends here

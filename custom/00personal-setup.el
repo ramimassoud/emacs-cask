@@ -1,12 +1,19 @@
+;;; personal-setup --- All personal preferences
+
+;;; Commentary:
+;; Any things that guides tell you to put in init.el go here
+
+;;; Code:
+
 ;; Miscellaneous preference variables
 (setq
  column-number-mode t
  completion-ignore-case t
  confirm-kill-emacs 'y-or-n-p
- default-fill-column 79
+ fill-column 79
  default-input-method "latin-1-postfix"
- default-tab-width 2
- display-time-24hr-format t
+ tab-width 2
+ display-time-24hr-format f
  display-time-day-and-date t
  font-lock-maximum-decoration t
  frame-title-format '("%f")
@@ -30,7 +37,6 @@
  speedbar-show-unknown-files t
  speedbar-use-images nil
  use-dialog-box nil
- woman-use-own-frame nil
  magit-last-seen-setup-instructions "1.4.0"
  uniquify-buffer-name-style 'forward)
 
@@ -107,7 +113,7 @@
 ;;(scroll-bar-mode nil)
 
 ;; Enable copy and pasting from clipboard
-(setq x-select-enable-clipboard t)
+(setq select-enable-clipboard t)
 
 ;; Disable backups
 (setq backup-inhibited t)
@@ -176,9 +182,9 @@
 (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
 (defun colorize-compilation-buffer ()
   (interactive)
-  (toggle-read-only)
+  (read-only-mode)
   (ansi-color-apply-on-region (point-min) (point-max))
-  (toggle-read-only))
+  (read-only-mode))
 
 (add-hook 'compilation-filter-hook 'colorize-compilation-buffer)
 
@@ -199,7 +205,7 @@
    (sp-local-pair "<%" "%>"))
 
 (require 'grizzl)
-(projectile-global-mode)
+(projectile-mode)
 (setq projectile-enable-caching t)
 (setq projectile-completion-system 'grizzl)
 
@@ -235,3 +241,8 @@
     (when (eq major-mode 'compilation-mode)
       (ansi-color-apply-on-region (point-min) (point-max))))
   (add-hook 'compilation-filter-hook 'colorize-compilation-buffer))
+
+(add-hook 'after-init-hook #'global-flycheck-mode)
+
+(provide '00personal-setup)
+;;; 00personal-setup.el ends here
