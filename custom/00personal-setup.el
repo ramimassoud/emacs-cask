@@ -6,39 +6,35 @@
 ;;; Code:
 
 ;; Miscellaneous preference variables
-(setq
- column-number-mode t
- completion-ignore-case t
- confirm-kill-emacs 'y-or-n-p
- fill-column 79
- default-input-method "latin-1-postfix"
- tab-width 2
- display-time-24hr-format f
- display-time-day-and-date t
- font-lock-maximum-decoration t
- frame-title-format '("%f")
- grep-command "grep -inr "
- hourglass-delay 2
- inhibit-default-init t
- inhibit-startup-echo-area-message user-login-name
- inhibit-startup-message t
- kill-whole-line t
- magic-mode-alist '()
- message-signature-separator "^-- *$"
- mouse-wheel-progressive-speed nil
- mouse-yank-at-point t
- read-file-name-completion-ignore-case t
- require-final-newline t
- ring-bell-function (lambda () nil)
- save-abbrevs nil
- scroll-conservatively 20
- sentence-end "[.?!][]\"')}]*\\($\\|[ \t]\\)[ \t\n]*"
- sentence-end-double-space nil
- speedbar-show-unknown-files t
- speedbar-use-images nil
- use-dialog-box nil
- magit-last-seen-setup-instructions "1.4.0"
- uniquify-buffer-name-style 'forward)
+(setq column-number-mode t )
+(setq completion-ignore-case t)
+(setq confirm-kill-emacs 'y-or-n-p)
+(setq fill-column 79)
+(setq tab-width 2)
+(setq display-time-24hr-format nil)
+(setq display-time-day-and-date t)
+(setq font-lock-maximum-decoration t)
+(setq frame-title-format '("%f"))
+(setq inhibit-default-init t)
+(setq inhibit-startup-echo-area-message user-login-name)
+(setq inhibit-startup-message t)
+(setq kill-whole-line t)
+(setq magic-mode-alist '())
+(setq message-signature-separator "^-- *$")
+(setq mouse-wheel-progressive-speed nil)
+(setq mouse-yank-at-point t)
+(setq read-file-name-completion-ignore-case t)
+(setq require-final-newline t)
+(setq ring-bell-function (lambda () nil))
+(setq save-abbrevs nil)
+(setq scroll-conservatively 20)
+(setq sentence-end "[.?!][]\"')}]*\\($\\|[ \t]\\)[ \t\n]*")
+(setq sentence-end-double-space nil)
+(setq speedbar-show-unknown-files t)
+(setq speedbar-use-images nil)
+(setq use-dialog-box nil)
+(setq magit-last-seen-setup-instructions "1.4.0")
+(setq uniquify-buffer-name-style 'forward)
 
 (load-theme 'solarized-dark t)
 (enable-theme 'solarized-dark)
