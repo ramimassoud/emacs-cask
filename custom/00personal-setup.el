@@ -186,7 +186,7 @@
 
  (require 'auto-complete-config)
  (add-to-list 'ac-dictionary-directories
-     "~/.emacs.d/.cask/26.1/elpa/auto-complete-20170124.1845/dict")
+     "~/.emacs.d/.cask/26.1/elpa/auto-complete-20170125.245/dict")
  (ac-config-default)
  (setq ac-ignore-case nil)
  (add-to-list 'ac-modes 'enh-ruby-mode)
@@ -200,10 +200,16 @@
    (sp-local-pair "<" ">")
    (sp-local-pair "<%" "%>"))
 
-(require 'grizzl)
-(projectile-mode)
+(require 'ivy)
+(setq ivy-re-builders-alist
+      '((t . ivy--regex-fuzzy)))
+
+(require 'projectile)
+(projectile-mode +1)
 (setq projectile-enable-caching t)
-(setq projectile-completion-system 'grizzl)
+(setq projectile-indexing-method 'hybrid)
+(setq projectile-sort-order 'recently-active)
+(setq projectile-completion-system 'ivy)
 
 (require 'highlight-indentation)
  (add-hook 'enh-ruby-mode-hook
