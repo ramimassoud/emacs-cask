@@ -35,6 +35,7 @@
 (depends-on "markdown-mode")
 (depends-on "marshal")
 (depends-on "multiple-cursors")
+(depends-on "nginx-mode")
 (depends-on "package-build")
 (depends-on "pallet")
 (depends-on "pcache")
