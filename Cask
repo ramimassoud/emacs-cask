@@ -10,7 +10,6 @@
 (depends-on "docker-compose-mode")
 (depends-on "dockerfile-mode")
 (depends-on "dotenv-mode")
-(depends-on "editorconfig")
 (depends-on "enh-ruby-mode")
 (depends-on "epl")
 (depends-on "exec-path-from-shell")
