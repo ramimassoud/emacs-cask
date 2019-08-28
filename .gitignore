@@ -8,3 +8,4 @@ projectile.cache
 url/*
 elpa/*
 tramp
+transient/*
