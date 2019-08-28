@@ -4,7 +4,7 @@
 ;;; Code:
 (package-initialize)
 
-(require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el")
+(require 'cask)
 (cask-initialize)
 (require 'pallet)
 (pallet-mode t)
@@ -24,7 +24,7 @@ use to determine if the package is installed/loaded."
   `(eval-after-load (symbol-name ,mode)
      '(progn ,@body)))
 
-(setq rbenv-installation-directory "/usr/local/bin/rbenv")
+(setq rbenv-installation-directory "~/.rbenv/bin/rbenv")
 (after 'rbenv-autoloads
  (require 'rbenv)
  (global-rbenv-mode))
