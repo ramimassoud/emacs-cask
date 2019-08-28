@@ -84,7 +84,10 @@
 (setq-default truncate-lines nil)
 ;; Do not use tabs for indentation
 (setq-default indent-tabs-mode nil)
+
+;; Get rid of menus
 (menu-bar-mode -1)
+(tool-bar-mode -1)
 
 ;; trucate even even when screen is split into multiple windows
 (setq-default truncate-partial-width-windows nil)
