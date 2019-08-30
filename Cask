@@ -21,6 +21,7 @@
 (depends-on "go-mode")
 (depends-on "highlight-indentation")
 (depends-on "ht")
+(depends-on "ibuffer-git")
 (depends-on "inf-ruby")
 (depends-on "inflections")
 (depends-on "ivy")
