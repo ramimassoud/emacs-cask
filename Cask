@@ -23,6 +23,7 @@
 (depends-on "ht")
 (depends-on "inf-ruby")
 (depends-on "inflections")
+(depends-on "ivy")
 (depends-on "jump")
 (depends-on "logito")
 (depends-on "magit")
