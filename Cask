@@ -32,6 +32,7 @@
 (depends-on "magit-gh-pulls")
 (depends-on "markdown-mode")
 (depends-on "marshal")
+(depends-on "minitest")
 (depends-on "multiple-cursors")
 (depends-on "nginx-mode")
 (depends-on "package-build")
