@@ -152,6 +152,10 @@
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 (add-to-list 'auto-mode-alist '("\\\.apib$" . markdown-mode))
 
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+(setq web-mode-engines-alist '("blade"  . "\\.antlers\\."))
+
 (setq path-to-ctags "/usr/local/bin/ctags") ;; <- you're ctags path here
 
 (defun create-tags (dir-name)
