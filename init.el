@@ -8,9 +8,11 @@
 (cask-initialize)
 (require 'pallet)
 (pallet-mode t)
-(add-to-list 'load-path "~/.emacs.d/custom")
+(add-to-list 'load-path "~/.emacs.d/custom/")
 
 (require 'package)
+(add-to-list 'package-archives
+             '("gnu" . "https://elpa.gnu.org/packages/") t)
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/") t)
 
@@ -41,7 +43,7 @@ use to determine if the package is installed/loaded."
  '(backup-directory-alist (quote ((".*" . "~/.emacs.d/backups/"))))
  '(package-selected-packages
    (quote
-    (minitest nginx-mode flycheck terraform-mode go-mode docker-compose-mode dockerfile-mode dotenv-mode protobuf-mode yasnippet yaml-mode web-mode undo-tree textmate solarized-theme smartparens rubocop rspec-mode robe rinari rbenv rainbow-delimiters projectile-rails pallet multiple-cursors markdown-mode magit-gh-pulls magit-filenotify highlight-indentation grizzl exec-path-from-shell enh-ruby-mode date-at-point auto-complete ag))))
+    (gnu-elpa-keyring-update php-mode minitest nginx-mode flycheck terraform-mode go-mode docker-compose-mode dockerfile-mode dotenv-mode protobuf-mode yasnippet yaml-mode web-mode undo-tree textmate solarized-theme smartparens rubocop rspec-mode robe rinari rbenv rainbow-delimiters projectile-rails pallet multiple-cursors markdown-mode magit-gh-pulls magit-filenotify highlight-indentation grizzl exec-path-from-shell enh-ruby-mode date-at-point auto-complete ag))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
