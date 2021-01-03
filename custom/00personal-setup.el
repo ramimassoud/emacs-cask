@@ -193,7 +193,7 @@
 
  (require 'auto-complete-config)
  (add-to-list 'ac-dictionary-directories
-     "~/.emacs.d/.cask/26.1/elpa/auto-complete-20170125.245/dict")
+     "~/.emacs.d/.cask/27.1/elpa/auto-complete-20201213.1255/dict")
  (ac-config-default)
  (setq ac-ignore-case nil)
  (add-to-list 'ac-modes 'enh-ruby-mode)
