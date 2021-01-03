@@ -253,7 +253,5 @@
 
 (add-hook 'after-init-hook #'global-flycheck-mode)
 
-(require 'ibuffer-git)
-
 (provide '00personal-setup)
 ;;; 00personal-setup.el ends here
