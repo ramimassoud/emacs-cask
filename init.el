@@ -2,8 +2,6 @@
 ;;; Commentary:
 
 ;;; Code:
-(package-initialize)
-
 (add-to-list 'load-path "~/.cask/")
 (require 'cask)
 (cask-initialize)
