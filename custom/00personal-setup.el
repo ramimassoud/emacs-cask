@@ -226,6 +226,7 @@
            (lambda () (highlight-indentation-mode)))
 
 (autoload 'ibuffer "ibuffer" "List buffers." t)
+(global-set-key (kbd "C-x C-b") 'ibuffer)
 
 (require 'flyspell)
 (setq flyspell-issue-message-flg nil)
