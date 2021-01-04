@@ -154,7 +154,9 @@
 
 (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
-(setq web-mode-engines-alist '("blade"  . "\\.antlers\\."))
+(setq web-mode-engines-alist
+      '(("php"    . "\\.phtml\\")
+        ("ctemplate"  . "\\.antlers\\.")))
 
 (setq path-to-ctags "/usr/local/bin/ctags") ;; <- you're ctags path here
 
