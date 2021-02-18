@@ -19,9 +19,7 @@
 (setq enh-ruby-bounce-deep-indent t)
 (setq enh-ruby-hanging-brace-indent-level 2)
 
-(require 'cl) ; If you don't have it already
-
-(defun* get-closest-gemfile-root (&optional (file "Gemfile"))
+(cl-defun get-closest-gemfile-root (&optional (file "Gemfile"))
   "Determine the pathname of the first instance of FILE starting from the current directory towards root.
 This may not do the correct thing in presence of links. If it does not find FILE, then it shall return the name
 of FILE in the current directory, suitable for creation"
