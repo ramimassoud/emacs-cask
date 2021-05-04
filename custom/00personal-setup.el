@@ -261,5 +261,7 @@
 
 (add-hook 'after-init-hook #'global-flycheck-mode)
 
+(global-set-key (kbd "C-c m") 'magit-status)
+
 (provide '00personal-setup)
 ;;; 00personal-setup.el ends here
