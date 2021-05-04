@@ -68,6 +68,14 @@
 (add-to-list 'default-frame-alist '(height . 45))
 (add-to-list 'default-frame-alist '(width . 175))
 
+;; Fix for ag highlighting issue https://github.com/Wilfred/ag.el/issues/124#issuecomment-386321142
+(ignore-errors
+  (require 'ansi-color)
+  (defun colorize-compilation-buffer ()
+    (when (eq major-mode 'compilation-mode)
+      (ansi-color-apply-on-region (point-min) (point-max))))
+  (add-hook 'compilation-filter-hook 'colorize-compilation-buffer))
+
 ;; To get rid of Weird color escape sequences in Emacs.
 ;; Instruct Emacs to use emacs term-info not system term info
 ;; http://stackoverflow.com/questions/8918910/weird-character-zsh-in-emacs-terminal
@@ -245,14 +253,6 @@
 (global-undo-tree-mode)
 
 (delete-selection-mode t)
-
-;; Fix for ag highlighting issue https://github.com/Wilfred/ag.el/issues/124#issuecomment-386321142
-(ignore-errors
-  (require 'ansi-color)
-  (defun colorize-compilation-buffer ()
-    (when (eq major-mode 'compilation-mode)
-      (ansi-color-apply-on-region (point-min) (point-max))))
-  (add-hook 'compilation-filter-hook 'colorize-compilation-buffer))
 
 (add-hook 'after-init-hook #'global-flycheck-mode)
 
