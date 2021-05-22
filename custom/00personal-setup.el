@@ -69,9 +69,9 @@
 (add-to-list 'default-frame-alist '(width . 175))
 
 (add-to-list 'initial-frame-alist '(left . 0))
-(add-to-list 'initial-frame-alist '(top . 0))
-(add-to-list 'initial-frame-alist '(width . 200))
-(add-to-list 'initial-frame-alist '(fullscreen . fullheight))
+(add-to-list 'initial-frame-alist '(top . 25))
+(add-to-list 'initial-frame-alist '(height . 48))
+(add-to-list 'initial-frame-alist '(width . 190))
 
 ;; Fix for ag highlighting issue https://github.com/Wilfred/ag.el/issues/124#issuecomment-386321142
 (ignore-errors
