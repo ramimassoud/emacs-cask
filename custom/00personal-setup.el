@@ -73,6 +73,7 @@
 (add-to-list 'initial-frame-alist '(height . 48))
 (add-to-list 'initial-frame-alist '(width . 190))
 
+(setq ag-reuse-window 't)
 
 ;; To get rid of Weird color escape sequences in Emacs.
 ;; Instruct Emacs to use emacs term-info not system term info
