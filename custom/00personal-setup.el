@@ -73,13 +73,6 @@
 (add-to-list 'initial-frame-alist '(height . 48))
 (add-to-list 'initial-frame-alist '(width . 190))
 
-;; Fix for ag highlighting issue https://github.com/Wilfred/ag.el/issues/124#issuecomment-386321142
-(ignore-errors
-  (require 'ansi-color)
-  (defun colorize-compilation-buffer ()
-    (when (eq major-mode 'compilation-mode)
-      (ansi-color-apply-on-region (point-min) (point-max))))
-  (add-hook 'compilation-filter-hook 'colorize-compilation-buffer))
 
 ;; To get rid of Weird color escape sequences in Emacs.
 ;; Instruct Emacs to use emacs term-info not system term info

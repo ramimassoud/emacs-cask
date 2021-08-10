@@ -49,5 +49,13 @@ use to determine if the package is installed/loaded."
  ;; If there is more than one, they won't work right.
  )
 
+;; Fix for ag highlighting issue https://github.com/Wilfred/ag.el/issues/124#issuecomment-386321142
+(ignore-errors
+  (require 'ansi-color)
+  (defun colorize-compilation-buffer ()
+    (when (eq major-mode 'compilation-mode)
+      (ansi-color-apply-on-region (point-min) (point-max))))
+  (add-hook 'compilation-filter-hook 'colorize-compilation-buffer))
+
 (provide 'init)
 ;;; init.el ends here
