@@ -219,6 +219,7 @@
 (require 'ivy)
 (setq ivy-re-builders-alist
       '((t . ivy--regex-fuzzy)))
+(setq ivy-use-virtual-buffers t)
 
 (require 'projectile)
 (projectile-mode +1)
