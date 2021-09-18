@@ -228,6 +228,11 @@
 (setq projectile-sort-order 'recently-active)
 (setq projectile-completion-system 'ivy)
 
+;; https://github.com/lewang/flx
+;; Improves sorting for fuzzy-matched results
+(require 'flx)
+(setq ivy-flx-limit 10000)
+
 (require 'highlight-indentation)
  (add-hook 'enh-ruby-mode-hook
            (lambda () (highlight-indentation-mode)))

@@ -7,6 +7,7 @@
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 ;; Press Command-p for fuzzy find in project
 (global-set-key (kbd "s-p") 'projectile-find-file)
+(global-set-key (kbd "\C-x p") 'projectile-find-file)
 ;; Press Command-b for fuzzy switch buffer
 (global-set-key (kbd "s-b") 'projectile-switch-to-buffer)
 (global-set-key "\C-ct" 'visit-tags-table)
