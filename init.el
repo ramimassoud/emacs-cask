@@ -33,6 +33,8 @@ use to determine if the package is installed/loaded."
 (load "00personal-setup.el")
 (load "01ruby.el")
 (load "02keybindings.el")
+(load "03org-roam-conf.el")
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
