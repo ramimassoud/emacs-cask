@@ -217,6 +217,7 @@
    (sp-local-pair "<%" "%>"))
 
 (require 'ivy)
+(ivy-mode 1)
 (setq ivy-re-builders-alist
       '((t . ivy--regex-fuzzy)))
 (setq ivy-use-virtual-buffers t)
