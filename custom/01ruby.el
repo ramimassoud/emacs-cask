@@ -8,7 +8,7 @@
 (require 'enh-ruby-mode)
 (require 'compile)
 (require 'rspec-mode)
-(require 'robe-mode)
+(require 'robe)
 
 (setq enh-ruby-program "~/.rbenv/shims/ruby")
 (autoload 'enh-ruby-mode "enh-ruby-mode" "Major mode for ruby files" t)
