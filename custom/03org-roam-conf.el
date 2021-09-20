@@ -13,6 +13,7 @@
 
 (setq org-roam-directory "~/roam_notes")
 (setq org-roam-db-location "~/roam_notes/org-roam.db")
+(setq org-id-locations-file "~/roam_notes/.org-id-locations")
 (setq org-roam-completion-everywhere t)
 
 (define-key global-map (kbd "C-c n l") 'org-roam-buffer-toggle)
