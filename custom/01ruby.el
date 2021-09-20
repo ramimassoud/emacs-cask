@@ -5,6 +5,11 @@
 
 ;;; Code:
 
+(require 'enh-ruby-mode)
+(require 'compile)
+(require 'rspec-mode)
+(require 'robe-mode)
+
 (setq enh-ruby-program "~/.rbenv/shims/ruby")
 (autoload 'enh-ruby-mode "enh-ruby-mode" "Major mode for ruby files" t)
 (add-to-list 'auto-mode-alist '("\\.rb$" . enh-ruby-mode))
@@ -31,8 +36,6 @@ of FILE in the current directory, suitable for creation"
      if (equal d root)
      return nil)))
 
-(require 'compile)
-
 (defun rspec-compile-file ()
   (interactive)
   (compile (format "cd %s;spring rspec %s"
@@ -55,6 +58,7 @@ of FILE in the current directory, suitable for creation"
             (local-set-key (kbd "C-x r j") 'robe-jump)
             ))
 (add-hook 'enh-ruby-mode-hook #'rubocop-mode)
+(add-hook 'enh-ruby-mode-hook 'robe-mode)
 
 ; Fix toggling from a lib/ file to the spec
 ; https://github.com/pezra/rspec-mode/issues/157
