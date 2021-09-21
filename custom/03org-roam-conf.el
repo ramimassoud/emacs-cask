@@ -16,6 +16,18 @@
 (setq org-id-locations-file "~/roam_notes/.org-id-locations")
 (setq org-roam-completion-everywhere t)
 
+(setq org-roam-capture-templates
+      '(
+        ("d" "default" plain
+         "%?"
+         :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n#+created_at: %U\n")
+         :unnarrowed t)
+        ("w" "web snippet" plain (file "~/roam_notes/templates/web_snippet.org")
+         :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n#+created_at: %U\n")
+         :unnarrowed t)
+        )
+      )
+
 (define-key global-map (kbd "C-c n l") 'org-roam-buffer-toggle)
 (define-key global-map (kbd "C-c n f") 'org-roam-node-find)
 (define-key global-map (kbd "C-c n i") 'org-roam-node-insert)
