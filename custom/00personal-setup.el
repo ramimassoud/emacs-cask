@@ -257,6 +257,7 @@
 (exec-path-from-shell-initialize)
 
 (global-undo-tree-mode)
+(setq undo-tree-history-directory-alist '(("." . "~/.emacs.d/undo")))
 
 (delete-selection-mode t)
 
