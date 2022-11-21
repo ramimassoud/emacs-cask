@@ -2,7 +2,7 @@
 ;;; Commentary:
 
 ;;; Code:
-(add-to-list 'load-path "/usr/local/Cellar/cask/0.8.8")
+(add-to-list 'load-path "/opt/homebrew/Cellar/cask/0.8.8")
 (require 'cask)
 (cask-initialize)
 (require 'pallet)
@@ -43,7 +43,9 @@ use to determine if the package is installed/loaded."
  '(auto-save-file-name-transforms '((".*" "~/.emacs.d/autosaves/\\1" t)))
  '(backup-directory-alist '((".*" . "~/.emacs.d/backups/")))
  '(package-selected-packages
-   '(flx counsel counsel-ag-popup ivy org-roam gnu-elpa-keyring-update php-mode minitest nginx-mode flycheck terraform-mode go-mode docker-compose-mode dockerfile-mode dotenv-mode protobuf-mode yasnippet yaml-mode web-mode undo-tree textmate solarized-theme smartparens rubocop rspec-mode robe rinari rbenv rainbow-delimiters projectile-rails pallet multiple-cursors markdown-mode magit-gh-pulls magit-filenotify highlight-indentation grizzl exec-path-from-shell enh-ruby-mode date-at-point auto-complete ag)))
+   '(cask project-explorer flx counsel counsel-ag-popup ivy org-roam gnu-elpa-keyring-update php-mode minitest nginx-mode flycheck terraform-mode go-mode docker-compose-mode dockerfile-mode dotenv-mode protobuf-mode yasnippet yaml-mode web-mode undo-tree textmate solarized-theme smartparens rubocop rspec-mode robe rinari rbenv rainbow-delimiters projectile-rails pallet multiple-cursors markdown-mode magit-gh-pulls magit-filenotify highlight-indentation grizzl exec-path-from-shell enh-ruby-mode date-at-point auto-complete ag))
+ '(undo-tree-auto-save-history nil)
+ '(warning-suppress-types '(((package reinitialization)))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
