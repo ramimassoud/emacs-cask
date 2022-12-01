@@ -3,6 +3,7 @@
 
 ;;; Code:
 (add-to-list 'load-path "/opt/homebrew/Cellar/cask/0.8.8")
+(add-to-list 'load-path "/usr/local/Cellar/cask/0.8.8")
 (require 'cask)
 (cask-initialize)
 (require 'pallet)
