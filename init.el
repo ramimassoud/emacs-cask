@@ -6,8 +6,6 @@
 (add-to-list 'load-path "/usr/local/Cellar/cask/0.8.8")
 (require 'cask)
 (cask-initialize)
-(require 'pallet)
-(pallet-mode t)
 (add-to-list 'load-path "~/.emacs.d/custom/")
 
 (require 'package)
